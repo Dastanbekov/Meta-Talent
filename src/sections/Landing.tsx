@@ -68,12 +68,9 @@ const Landing = () => {
               </GradientButton>
             </Link>
           </div>
-          <div className="flex snap-x gap-4 overflow-x-auto sm:grid sm:grid-cols-2 sm:overflow-visible">
+          <div className="grid gap-4 sm:grid-cols-2">
             {highlights.map((item) => (
-              <div
-                key={item.label}
-                className="min-w-[220px] rounded-2xl bg-white/70 px-4 py-3 shadow-sm backdrop-blur sm:min-w-0"
-              >
+              <div key={item.label} className="rounded-2xl bg-white/70 px-4 py-3 shadow-sm backdrop-blur">
                 <p className="text-xs text-muted">{item.label}</p>
                 <p className="text-sm font-semibold text-brand-dark">{item.value}</p>
               </div>
@@ -130,11 +127,11 @@ const Landing = () => {
           title="Тест · Роадмап · Комьюнити"
           description="Мобильный UX с плавными свайпами, поясняющими карточками и живыми анимациями дает ощущение настоящего приложения."
         />
-        <div className="mt-10 flex snap-x gap-4 overflow-x-auto md:grid md:grid-cols-3 md:gap-6 md:overflow-visible">
+        <div className="mt-10 grid gap-4 md:grid-cols-3 md:gap-6">
           {onboardingSteps.map((step, index) => (
             <motion.div
               key={step.title}
-              className="min-w-[240px] rounded-3xl border border-brand-primary/10 bg-brand-surface p-5 md:min-w-0"
+              className="rounded-3xl border border-brand-primary/10 bg-brand-surface p-5"
               whileHover={{ y: -4 }}
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-cta-gradient text-white shadow-lg">
@@ -148,11 +145,11 @@ const Landing = () => {
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="rounded-[32px] border border-brand-primary/15 bg-white/90 p-6 shadow-lg">
             <p className="text-xs uppercase tracking-[0.3em] text-muted">Отзывы</p>
-            <div className="mt-4 flex snap-x gap-4 overflow-x-auto">
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
               {testimonials.map((item) => (
                 <motion.div
                   key={item.id}
-                  className="min-w-[240px] rounded-3xl border border-brand-primary/10 bg-brand-surface p-4"
+                  className="rounded-3xl border border-brand-primary/10 bg-brand-surface p-4"
                   whileHover={{ y: -4 }}
                 >
                   <div
